@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 
-const uri = "mongodb+srv://nakul:-978u_V2mZzXTiH@cluster0.ud3ycxn.mongodb.net/?retryWrites=true&w=majority";
-
+let uri = 'mongodb+srv://nakul:-978u_V2mZzXTiH@cluster0.ud3ycxn.mongodb.net/?retryWrites=true&w=majority'
 
 let isConnected = false; // track the connection
 
@@ -14,7 +13,7 @@ export const connectToDB = async () => {
   }
 
   try {
-    await mongoose.connect(process.env.MONGODB_URI, {
+    await mongoose.connect(process.env.MONOGDB_URI, {
       dbName: "share_prompt",
       useNewUrlParser: true,
       useUnifiedTopology: true,
